@@ -1,5 +1,6 @@
-python-telegram-bot==21.10
-openai==1.63.2
-Flask==3.0.3
-psycopg2-binary==2.9.10
-gunicorn==23.0.0
+flask
+gunicorn
+python-telegram-bot==20.6
+psycopg2-binary
+openai
+python-dotenv
