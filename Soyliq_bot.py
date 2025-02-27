@@ -7,7 +7,7 @@ import psycopg2
 from flask import Flask, request
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
-
+from telegram.ext import filters
 # Загружаем переменные окружения
 TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
@@ -155,3 +155,9 @@ def health_check():
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host="0.0.0.0", port=port)
+
+PORT = int(os.environ.get('PORT', '8443'))
+updater.start_webhook(listen='0.0.0.0', port=PORT, url_path="7629370059:AAHsmCRo1f7TWcdJ3D1Fs3-E_-xppoS9GLo")
+updater.bot.setWebhook(f'https://soyliq-telegram-bot-9312e973f9bb.herokuapp.com/{TOKEN}')
+updater.idle()
+

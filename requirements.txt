@@ -1,6 +1,6 @@
 flask
 gunicorn
-python-telegram-bot==20.6
+python-telegram-bot==21.10
 psycopg2-binary
 openai
 python-dotenv
