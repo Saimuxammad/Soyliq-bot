@@ -1,1 +1,1 @@
-web: gunicorn bot:app
+web: gunicorn Soyliq_bot:app
